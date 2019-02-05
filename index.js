@@ -10,7 +10,7 @@ function exactMatch(drivers, match){
   return drivers.filter(function(driver){
     let isMatch = false
     for(const key in match) {
-      isMatch = drivers[key] === match[key])
+      isMatch = drivers[key] === match[key]
     }
     return isMatch
   })
