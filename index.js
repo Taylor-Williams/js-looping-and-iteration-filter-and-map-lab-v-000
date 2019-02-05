@@ -7,7 +7,7 @@ function driverNamesWithRevenueOver(drivers, revenue){
   return newDrivers.map(driver => driver.name)
 }
 function exactMatch(drivers, match){
-  return drivers.filter(driver => driver[match.keys.first] = match.values.first)
+  return drivers.filter(driver => driver[match.keys.first] === match.values.first)
 }
 function exactMatchToList(drivers, match){
   return drivers.map(function(driver){
