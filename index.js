@@ -13,7 +13,7 @@ function exactMatch(drivers, matcher){
       matches = driver[key] === matcher[key]
     }
     return matches
-  });
+  })
 }
 function exactMatchToList(drivers, matcher){
   const newDrivers = exactMatch(drivers, matcher)
