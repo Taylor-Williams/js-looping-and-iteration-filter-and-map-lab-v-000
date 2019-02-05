@@ -1,10 +1,12 @@
 // Code your solution here:
 function driversWithRevenueOver(drivers, revenue){
-  return drivers.map(function(driver){
+  const newDrivers
+  newDrivers = drivers.map(function(driver){
     if(driver.revenue > revenue){
       return driver
     }
   })
+  return newDrivers
 }
 function driverNamesWithRevenueOver(drivers, revenue){
   return drivers.map(function(driver){
