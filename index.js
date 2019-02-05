@@ -7,7 +7,13 @@ function driverNamesWithRevenueOver(drivers, revenue){
   return newDrivers.map(driver => driver.name)
 }
 function exactMatch(drivers, match){
-  return drivers.filter(driver => driver[Object.keys(match)[0]] === Object.values(match)[0])
+  return drivers.filter(function(driver){
+    for(const key in match) {
+      if(drivers[key] === match[key]){
+        return driver
+      }
+    }
+  })
 }
 function exactMatchToList(drivers, match){
   return drivers.map(function(driver){
