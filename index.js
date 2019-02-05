@@ -17,10 +17,7 @@ function exactMatch(drivers, matcher){
     return matches;
   });
 }
-function exactMatchToList(drivers, match){
-  return drivers.map(function(driver){
-    if(driver[match.keys.first] === match.values.first){
-      return driver.name
-    }
-  })
+function exactMatchToList(drivers, matcher){
+  const newDrivers = exactMatch(drivers, matcher)
+  return newDrivers.map(driver => driver.name)
 }
