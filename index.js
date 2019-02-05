@@ -1,16 +1,11 @@
 // Code your solution here:
 function driversWithRevenueOver(drivers, revenue){
-  return drivers.map(function(driver){
-    if (driver.revenue > revenue){
-      return driver;
-    }
-  });
+  return drivers.filter(driver => driver.revenue > revenue)
 }
 function driverNamesWithRevenueOver(drivers, revenue){
-  return drivers.map(function(driver){
-    if(driver.revenue > revenue){
-      return driver.name
-    }
+  const newDrivers = driversWithRevenueOver(drivers, revenue)
+  return newDrivers.map(function(driver){
+    newDrivers.map(driver => driver.name)
   })
 }
 function exactMatch(drivers, match){
